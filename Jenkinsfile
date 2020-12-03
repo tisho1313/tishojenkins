@@ -15,7 +15,7 @@ pipeline {
         }
         stage ('Deliver') {
             steps {
-                sh 'readlink -f ./package.json'
+                sh 'echo 'Batura Matura +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''
             }
         }
     }
