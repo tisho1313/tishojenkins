@@ -1,8 +1,10 @@
 pipeline {
     agent { 
         docker { 
-            image 'node:12.16.2'
+            image 'tisho1313/primer1:latest'
             args '-p 3000:3000'
+            registryUrl 'https://hub.docker.com/repository/docker/tisho1313/primer1'
+            registryCredentialsId 'tisho1313/MonyBony1!'
         } 
     }
     stages {
