@@ -3,8 +3,8 @@ pipeline {
         docker { 
             image 'tisho1313/primer1:latest'
             args '-p 3000:3000'
-            registryUrl 'https://hub.docker.com/repository/docker/tisho1313/primer1'
-            registryCredentialsId 'e6c539d2-df28-49ec-9e72-9a2cbd55ac4e'
+            registryUrl 'https://hub.docker.com/'
+            registryCredentialsId '4415c874-654d-42cb-a3d9-977ceb185e55'
         } 
     }
     stages {
