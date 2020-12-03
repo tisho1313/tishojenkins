@@ -15,7 +15,7 @@ pipeline {
         }
         stage ('Deliver') {
             steps {
-                sh 'echo 'Batura Matura +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''
+                sh 'echo "Batura Matura "'
             }
         }
     }
