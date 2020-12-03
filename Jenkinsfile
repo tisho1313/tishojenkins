@@ -1,16 +1,21 @@
 pipeline {
-    agent any
+    agent { 
+        docker { 
+            image 'node:12.16.2'
+            args '-p 3000:3000'
+        } 
+    }
     stages {
-        stage('Build') { 
-            agent {
-                docker {
-                    label 'docker'
-                    image 'python:2-alpine' 
-                }
-            }
+        stage('Build') {
             steps {
-                sh 'python -m py_compile sources/add2vals.py sources/calc.py' 
-                stash(name: 'compiled-results', includes: 'sources/*.py*') 
+                sh 'node --version'
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+        stage ('Deliver') {
+            steps {
+                sh 'readlink -f ./package.json'
             }
         }
     }
