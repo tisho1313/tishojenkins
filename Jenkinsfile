@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'echo "Stage Build"'
+                sh 'mkdir -p output'
             }
         }
         stage ('Deliver') {
