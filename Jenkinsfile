@@ -4,7 +4,7 @@ pipeline {
             image 'tisho1313/primer1:latest'
             args '-p 3000:3000'
             registryUrl 'https://docker.com/'
-            registryCredentialsId 'dcbd9acd-3236-4c3a-aebc-1a77a20d513b'
+            registryCredentialsId '3b1ec055-2d12-4aa9-b7dc-7468b75bc90d'
         } 
     }
     stages {
