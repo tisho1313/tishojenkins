@@ -3,7 +3,7 @@ pipeline {
         docker { 
             image 'tisho1313/primer1:latest'
             args '-p 3000:3000'
-            registryUrl 'https://docker.com/'
+            registryUrl 'https://hub.docker.com/'
             registryCredentialsId '3b1ec055-2d12-4aa9-b7dc-7468b75bc90d'
         } 
     }
